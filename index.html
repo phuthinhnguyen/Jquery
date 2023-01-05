@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        h1{
+            padding: 10px;
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>ksdhfkj</p>
+    <div style="background-color: yellow;">
+        <h1>A
+            <span>B</span>
+        </h1>
+        <h2>A
+            <span>B</span>
+        </h2>
+    </div>
+    
+    <input type="text">
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <button id="toggle">toggle</button>
+    <button id="fade">fade</button>
+    <button id="slide">slide</button>
+    <button id="animate">animate</button>
+    <button id="text">text</button>
+    <button id="html">html</button>
+    <button id="val">val</button>
+    <button id="settext">settext</button>
+    <button id="sethtml">sethtml</button>
+    <button id="setval">setval</button>
+    <button id="remove">remove</button>
+    <button id="empty">empty</button>
+    <button id="append">append</button>
+    <button id="prepend">prepend</button>
+    <button id="before">before</button>
+    <button id="after">after</button>
+    <button id="class">class</button>
+    <button id="css">css</button>
+    <button id="dimension">dimension</button>
+    <button id="innerdimension">innerdimension</button>
+    <button id="outerdimension">outerdimension</button>
+    <button id="outertruedimension">outertruedimension</button>
+    <button id="parent">parent</button>
+    <button id="parents">parents</button>
+    <button id="parentsuntil">parentsuntil</button>
+    <button id="child">child</button>
+    <button id="find">find</button>
+    <script>
+       $(document).ready(function name(params) {
+        $("#hide").click(function name(params) {
+            $("p").hide();
+            $("h1").hide();
+        })
+        $("#show").click(function name(params) {
+            $("p").show();
+            $("h1").show();
+        })
+        $("#toggle").click(function name(params) {
+            $("p").toggle();
+        })
+       })
+       $(document).ready(function name(params) {
+        $("#fade").click(function name(params) {
+            $("h1").fadeToggle(2000);
+        })
+       })
+       $(document).ready(function name(params) {
+        $("#slide").click(function name(params) {
+            $("h1").slideToggle();
+        })
+       })
+     
+       $(document).ready(function name(params) {
+        $("#animate").click(function name(params) {
+            $("h1").animate({height:"toggle",position:"sticky",top:"0"})
+            .slideToggle();
+        })
+       })
+       $(document).ready(function name(params) {
+        $("#text").click(function name(params) {
+            alert($("h1").text());
+            alert($("h1").attr("background-color"))
+        })
+        $("#html").click(function name(params) {
+            alert($("h1").html());
+        })
+        $("#val").click(function name(params) {
+            alert($("input").val());
+        })
+       })
+       $(document).ready(function name(params) {
+        $("#settext").click(function name(params) {
+            $("h1").text("abc");
+        })
+        $("#sethtml").click(function name(params) {
+            $("h1").html("<b>a</b>");
+        })
+        $("#setval").click(function name(params) {
+            $("input").val("<b>a</b>");
+        })
+        $("#remove").click(function name(params) {
+            $("h1").remove();
+        })
+        $("#empty").click(function name(params) {
+            $("h1").empty();
+        })
+        $("#append").click(function name(params) {
+            $("h1").append("<b>append</b>");
+        })
+        $("#prepend").click(function name(params) {
+            $("h1").prepend("<b>prepend</b>");
+        })
+        $("#before").click(function name(params) {
+            $("h1").before("<b>before</b>");
+        })
+        $("#after").click(function name(params) {
+            $("h1").after("<b>after</b>");
+        })
+        $("#class").click(function name(params) {
+            $("h1").toggleClass("red");
+        })
+        $("#css").click(function name(params) {
+            $("h1").css({"background-color":"green","padding":"10px","border":"2px solid black","margin":"10px"})
+        })
+        $("#dimension").click(function name(params) {
+            $("h1").append(" ",$("h1").width() + "x" + $("h1").height())
+        })
+        $("#innerdimension").click(function name(params) {
+            $("h1").append(" ",$("h1").innerWidth() + "x" + $("h1").innerHeight())
+        })
+        $("#outerdimension").click(function name(params) {
+            $("h1").append(" ",$("h1").outerWidth() + "x" + $("h1").outerHeight())
+        })
+        $("#outertruedimension").click(function name(params) {
+            $("h1").append(" ",$("h1").outerWidth(true) + "x" + $("h1").outerHeight(true))
+        })
+        $("#parent").click(function name(params) {
+            $("span").parent().css({"background-color":"red"})
+        })
+        $("#parents").click(function name(params) {
+            $("span").parents().css({"background-color":"red"})
+        })
+        $("#parentsuntil").click(function name(params) {
+            $("span").parentsUntil("div").css({"background-color":"red"})
+        })
+        $("#child").click(function name(params) {
+            $("div").children("h1").css({"color":"white"})
+        })
+        $("#find").click(function name(params) {
+            $("div").find("h1").css({"color":"white"})
+        })
+       })
+
+    </script>
+</body>
+</html>
