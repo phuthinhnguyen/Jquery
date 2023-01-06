@@ -55,8 +55,14 @@
     <button id="parent">parent</button>
     <button id="parents">parents</button>
     <button id="parentsuntil">parentsuntil</button>
-    <button id="child">child</button>
+    <button id="child">children</button>
     <button id="find">find</button>
+    <button id="siblings">siblings</button>
+    <button id="next">next</button>
+    <button id="pre">pre</button>
+    <button id="first">first</button>
+    <button id="last">last</button>
+    <button id="eq">eq</button>
     <script>
        $(document).ready(function name(params) {
         $("#hide").click(function name(params) {
@@ -160,6 +166,24 @@
         })
         $("#find").click(function name(params) {
             $("div").find("h1").css({"color":"white"})
+        })
+        $("#siblings").click(function name(params) {
+            $("h1").siblings().css({"color":"white"})
+        })
+        $("#next").click(function name(params) {
+            $("h1").next().css({"color":"white"})
+        })
+        $("#pre").click(function name(params) {
+            $("h1").prev().css({"color":"white"})
+        })
+        $("#first").click(function name(params) {
+            $("span").first().css({"color":"white"})
+        })
+        $("#last").click(function name(params) {
+            $("span").last().css({"color":"white"})
+        })
+        $("#eq").click(function name(params) {
+            $("span").eq(1).css({"color":"white"})
         })
        })
 
