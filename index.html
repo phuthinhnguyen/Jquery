@@ -14,6 +14,28 @@
         .red{
             background-color: red;
         }
+        table{
+        width: 100%;
+        text-align: left;
+        border:1px solid lightgray;
+        border-collapse: collapse;
+        }
+        td,th{
+        padding: 10px 0px;
+        }
+        tr{
+            border: 1px solid lightgray;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    
+        input{
+            margin-bottom: 10px;
+        }
+        li{
+            padding: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +85,45 @@
     <button id="first">first</button>
     <button id="last">last</button>
     <button id="eq">eq</button>
+    <p>Type something in the input field to search the table for first names, last names or emails:</p>
+   <input id="input" type="text" placeholder="Search..">
+    <table>
+        <tr id="not">
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+       
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@mail.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@greatstuff.com</td>
+        </tr>
+        <tr>
+            <td>Anja</td>
+            <td>Ravendale</td>
+            <td>a_r@test.com</td>
+        </tr>
+    </table>
+    <ul> Name
+        <li>John</li>
+        <li>Mary</li>
+        <li>July</li>
+        <li>Anja</li>
+        <li>Thinh</li>
+        <li>Nen</li>
+        <li>Nuo</li>
+    </ul>
     <script>
        $(document).ready(function name(params) {
         $("#hide").click(function name(params) {
@@ -184,6 +245,17 @@
         })
         $("#eq").click(function name(params) {
             $("span").eq(1).css({"color":"white"})
+        })
+       })
+       $(document).ready(function name(params) {
+        $("#input").on("keyup",function name(params) {
+            var text=$(this).val().toLowerCase();
+            $("table tr").not("#not").filter(function name(params) {
+                $(this).toggle($(this).text().toLowerCase().indexOf(text)>-1) 
+            })
+            $("ul li").filter(function name(params) {
+                $(this).toggle($(this).text().toLowerCase().indexOf(text)>-1)
+            })
         })
        })
 
